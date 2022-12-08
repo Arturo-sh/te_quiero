@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'kalam';
+    src: url(../fonts/Kalam-Regular.ttf);
+}
+
+body {
+    font-family: 'kalam';
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    /* overflow: hidden; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#btnOpen {
+    margin-left: 20px;
+    background-color: #ffffff;
+    color: #FF0000;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#btnOpen:hover {
+    background-color: #FF0000;
+    color: #ffffff;
+}
+
+#btnClose {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#title {
+    font-size: 0px;
+    text-align: center;
+}
+
+#msg {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    text-align: justify;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    background-color: blueviolet;
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 0.6s ease-in-out;
+    padding-bottom: 0;
+}
+
+#msg {
+    animation: changeColor 3s ease-in-out infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: rgb(226, 42, 103);
+    }
+    50% {
+        background-color: rgb(226, 50, 50);
+    }
+    100% {
+        background-color: rgb(226, 42, 103);
+    }
+}
+
+#heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    max-width: 10%;
+    margin: 0 auto;
+}
+
+@keyframes heartBeat {
+    0% {
+        scale: 1.2;
+    }
+    50% {
+        scale: 1.5;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.7em;
+    }
+    .container {
+        padding: 0 30px;
+    }
+    #msg {
+        width: 80%;
+    }
+}
